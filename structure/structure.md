@@ -64,3 +64,11 @@
 ## Demo
 
 （并不多）
+
+## 后端
+
+后端代码放在了[GeminiLab/tirr](https://github.com/GeminiLab/tirr)仓库下。这一部分由C# on .NET Core写成。
+
+`tirr/Statement.cs`：包含了AST各种节点的定义。
+
+`tirr/Program.cs`：包含了读入，处理，输出AST的代码。程序的入口点也在这一部分。
