@@ -43,9 +43,10 @@
 
 ## 标准库
 
-`Basic.hs`：
+`Basic.hs`：存在内存里的数据类型。与`C`不同的是，普通的类型如`Int64`是无法直接
+更改的。作为代替，我们使用`Basic`将其包装起来，以表示这是一个可变量，形如`(Basic Int64)`。
 
-`Box.hs`：
+`Box.hs`：当前仅有一个`Ref`，表示一个没有RAII的指针。
 
 `ELF.hs`：用于支持ELF文件的装载。
 
@@ -55,15 +56,15 @@
 
 `StringLiteral.hs`：字符串字面量。
 
-`Option.hs`：TBD
+`Option.hs`：用于实现`Tagged Union`的功能，并未完成。
 
-`Vec.hs`：
+`Vec.hs`：现在仅有一个`StaticVec`，可以视作由同种类型元素组成的tuple。
 
 `X86_64.hs`：平台支持。
 
 ## Demo
 
-（并不多）
+位于`Loader/Main.hs`，支持了中断响应和文本输出。
 
 ## 后端
 
